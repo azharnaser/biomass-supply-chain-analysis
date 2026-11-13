@@ -185,8 +185,8 @@ Excel (data preparation), SQL (SQLite or PostgreSQL), Python (pandas), Power BI.
 
 ## Author
 
-**[Your Name]**
-Data analyst in training, working in biomass trading. This project uses data from my own operations to build and demonstrate skills in data cleaning, SQL, Python and business intelligence.
+**AZHAR NASER**
+Data analyst in training, working in biomass trading and supply chain company. This project uses data from my own operations to build and demonstrate skills in data cleaning, SQL, Python and business intelligence.
 
 - LinkedIn: linkedin.com/in/azhar-naser-281b33217
 - Email: azharnaser01@gmail.com
