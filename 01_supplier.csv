@@ -1,0 +1,11 @@
+no,supplier_id,supplier_name,region,port_id,buying_price_per_kg,effective_from,effective_to
+1,BSP,Bangun Sapta Pratama,Batulicin,BTL,800,2026-09-01,
+2,STP,Sigma Tunas Perdana,Batulicin,BTL,790,2026-09-01,
+3,SAF,Sandra Agro Figma,Batulicin,BTL,740,2026-09-01,
+4,STD,Siklus Tani Damai,Banjarmasin,BJM,800,2026-09-01,2026-09-30
+5,STD,Siklus Tani Damai,Banjarmasin,BJM,750,2026-10-01,
+6,BGM,Batu Guna Makmur,Banjarmasin,BJM,825,2026-09-01,
+7,SSP,Santika Surya Panca,Sampit,SPT,700,2026-09-01,
+8,KMB,Kencana Mulia Bahagia,Sampit,SPT,610,2026-09-01,
+9,BIS,Bintang Indo Surya,Sampit,SPT,800,2026-09-01,
+10,PMK,Prima Mulia Kencana,Sampit,SPT,600,2026-09-01,

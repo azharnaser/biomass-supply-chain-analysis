@@ -1,0 +1,25 @@
+no,customer_id,customer_name,supplier_id,selling_price_per_kg,effective_date,payment_term
+1,AGRO,Agro Indonesia,BSP,1380,2026-09-01,DP 70% - 30 % After Discharging
+2,AGRO,Agro Indonesia,SAF,1380,2026-09-01,DP 70% - 30 % After Discharging
+3,AGRO,Agro Indonesia,STP,1380,2026-09-01,DP 70% - 30 % After Discharging
+4,AGRO,Agro Indonesia,PMK,1350,2026-09-01,DP 70% - 30 % After Discharging
+5,AGRO,Agro Indonesia,BIS,1335,2026-09-01,DP 70% - 30 % After Discharging
+6,AGRO,Agro Indonesia,KMB,1335,2026-09-01,DP 70% - 30 % After Discharging
+7,BUMI,Bumi Nusantara Komoditas,BSP,1360,2026-09-01,COD
+8,BUMI,Bumi Nusantara Komoditas,SAF,1360,2026-09-01,COD
+9,BUMI,Bumi Nusantara Komoditas,STP,1360,2026-09-01,COD
+10,BUMI,Bumi Nusantara Komoditas,BIS,1350,2026-09-01,COD
+11,BUMI,Bumi Nusantara Komoditas,KMB,1350,2026-09-01,COD
+12,BUMI,Bumi Nusantara Komoditas,STD,1350,2026-09-01,COD
+13,BUMI,Bumi Nusantara Komoditas,BGM,1300,2026-09-01,COD
+14,BUMI,Bumi Nusantara Komoditas,SSP,1360,2026-09-01,COD
+15,CAKRA,Cakra Garda Indonesia,BGM,1120,2026-09-01,DP 70% - 30 % After Discharging
+16,JAGO,Jago Arta Buana,BSP,1090,2026-09-01,DP 70% - 30 % After Discharging
+17,JAGO,Jago Arta Buana,STD,1090,2026-09-01,DP 70% - 30 % After Discharging
+18,JAGO,Jago Arta Buana,STP,1090,2026-09-01,DP 70% - 30 % After Discharging
+19,ORCA,Orca Bangun Negeri,BIS,1350,2026-09-01,DP 70% - 30 % After Discharging
+20,VINA,Vina Agro Nusantara,BSP,1370,2026-09-01,DP 70% - 30 % After Discharging
+21,VINA,Vina Agro Nusantara,STP,1370,2026-09-01,DP 70% - 30 % After Discharging
+22,VINA,Vina Agro Nusantara,SAF,1360,2026-09-01,DP 70% - 30 % After Discharging
+23,YAKIN,Yakin Maju Sukses,BSP,1365,2026-09-01,DP 70% - 30 % After Discharging
+24,YAKIN,Yakin Maju Sukses,STP,1365,2026-09-01,DP 70% - 30 % After Discharging
