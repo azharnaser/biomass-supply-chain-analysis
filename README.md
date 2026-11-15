@@ -4,6 +4,10 @@ An end-to-end data analytics project built on **real operating data from my biom
 
 All company, supplier and customer names are **anonymized**.
 
+## Disclaimer
+
+The data is anonymized and shared for educational and portfolio purposes only. Names have been changed; prices and costs are real values. Figures should not be used for commercial decisions.
+
 ## Project status
 
 - [x] Data collected from real operations and anonymized
@@ -11,7 +15,7 @@ All company, supplier and customer names are **anonymized**.
 - [x] Tables exported to clean CSV files (UTF-8, comma-separated, ISO dates)
 - [ ] SQL analysis (joins, aggregations, window functions)
 - [ ] Python analysis (pandas, exploratory analysis)
-- [ ] Power BI dashboard
+- [ ] Tableau Public or Looker Studio dashboard
 - [ ] Findings and recommendations
 
 ## Business questions
@@ -146,27 +150,26 @@ The raw working files were cleaned and checked before any analysis:
 ### Data notes
 
 - Freight is 0 on one route (BGM to CAKRA) because the delivery ends at the loading port.
-- Two deliveries on 20 Oct (STP to YAKIN, 8,930 kg each) have the same date, route and quantity and are kept as two separate records. [Confirm before publishing.]
+- Two deliveries on 20 Oct (STP to YAKIN, 8,930 kg each) have the same date, route and quantity. Both are real, separate trucks.
 - Routes with no deliveries in a month were removed, so every route row has real volume.
-- Prices and costs are in Rupiah per kg. [State here whether they are real or scaled.]
+- Prices and costs are real values in Rupiah per kg.
 
 ## Repository structure
 
 ```
 biomass-supply-chain-analysis/
 ├── README.md
-├── audit_dataset.py        # data quality audit (74 checks, runs on the Excel workbook)
+├── audit_dataset.py        # data quality audit (runs on the source Excel workbook, not published here)
 ├── data/                   # the 5 CSV files
-├── sql/                    # SQL queries
-├── notebooks/              # Python analysis
-└── dashboard/              # Power BI file and screenshots
+└── sql/
+    └── biomass_masterdata.sql
 ```
 
 ## How to reproduce
 
-1. Load the CSV files from `data/` into SQLite or PostgreSQL (one table per file).
-2. Run the queries in `sql/`.
-3. Open the notebooks in `notebooks/` for the Python analysis.
+1. Create a SQLite database (for example with DB Browser for SQLite).
+2. Create the five tables and import the CSV files from `data/`.
+3. Run `sql/biomass_masterdata.sql`.
 
 In Python:
 
@@ -177,21 +180,17 @@ deliveries = pd.read_csv("data/03_deliveries.csv", parse_dates=["date", "month"]
 
 ## Tools
 
-Excel (data preparation), SQL (SQLite or PostgreSQL), Python (pandas), Power BI.
+Excel (data preparation), SQL (SQLite or PostgreSQL), Python (pandas), Tableau Public / Looker Studio.
 
 ## Key findings
 
-*To be added after the SQL, Python and Power BI analysis.*
+*To be added after the SQL, Python and Tableau Public / Looker Studio analysis.*
 
 ## Author
 
 **AZHAR NASER**
-Data analyst in training, working in biomass trading and supply chain company. This project uses data from my own operations to build and demonstrate skills in data cleaning, SQL, Python and business intelligence.
+This project uses data from my biomass trading and supply chain operations to build and demonstrate skills in data cleaning, SQL, Python and business intelligence.
 
-- LinkedIn: linkedin.com/in/azhar-naser-281b33217
+- LinkedIn: https://www.linkedin.com/in/azhar-naser-281b33217
 - Email: azharnaser01@gmail.com
-- GitHub: Azhar Naser
-
-## Disclaimer
-
-The data is anonymized and shared for educational and portfolio purposes only. Names, and where stated, values have been changed, so figures should not be used for commercial decisions.
+- GitHub: https://github.com/azharnaser
