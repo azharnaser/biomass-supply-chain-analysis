@@ -13,7 +13,7 @@ The data is anonymized and shared for educational and portfolio purposes only. N
 - [x] Data collected from real operations and anonymized
 - [x] Data cleaned, modelled into 5 related tables and validated (71 automated checks, 0 failures)
 - [x] Tables exported to clean CSV files (UTF-8, comma-separated, ISO dates)
-- [ ] SQL analysis (joins, aggregations, window functions)
+- [x] SQL analysis (joins, aggregations, window functions)
 - [ ] Python analysis (pandas, exploratory analysis)
 - [ ] Tableau Public or Looker Studio dashboard
 - [ ] Findings and recommendations
@@ -159,10 +159,10 @@ The raw working files were cleaned and checked before any analysis:
 ```
 biomass-supply-chain-analysis/
 ├── README.md
-├── audit_dataset.py                    # data quality audit (runs on the source Excel workbook, not published here)
-├── data/                               # the 5 CSV files
+├── audit_dataset.py                      # data quality audit (runs on the source Excel workbook, not published here)
+├── data/                                 # the 5 CSV files
 └── sql/
-    ├── 00_create_database.sql          # creates all tables and loads the data
+    ├── 00_create_database.sql            # creates all tables and loads the data
     └── 01_volume_and_profit_summary.sql  # analysis queries (checked against expected results)
 ```
 
