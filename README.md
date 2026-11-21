@@ -57,7 +57,7 @@ erDiagram
 
 | From | To | On |
 |---|---|---|
-| `03_deliveries` | `01_supplier` | `supplier_id` |
+| `03_deliveries` | `01_supplier` | `supplier_id` and `date` between `effective_from` and `effective_to` |
 | `03_deliveries` | `02_customer` | `customer_id` and `supplier_id` |
 | `03_deliveries` | `04_gross_profit` | `delivery_ref = delivery_code` and `month` |
 | `05_purchasing_history` | `01_supplier` | `supplier_id` |
@@ -159,17 +159,19 @@ The raw working files were cleaned and checked before any analysis:
 ```
 biomass-supply-chain-analysis/
 ├── README.md
-├── audit_dataset.py        # data quality audit (runs on the source Excel workbook, not published here)
-├── data/                   # the 5 CSV files
+├── audit_dataset.py                    # data quality audit (runs on the source Excel workbook, not published here)
+├── data/                               # the 5 CSV files
 └── sql/
-    └── biomass_masterdata.sql
+    ├── 00_create_database.sql          # creates all tables and loads the data
+    └── 01_volume_and_profit_summary.sql  # analysis queries (checked against expected results)
 ```
 
 ## How to reproduce
 
-1. Create a SQLite database (for example with DB Browser for SQLite).
-2. Create the five tables and import the CSV files from `data/`.
-3. Run `sql/biomass_masterdata.sql`.
+1. Create a new SQLite database (for example with DB Browser for SQLite).
+2. Load the data with **File > Import > Database from SQL file...** and choose `sql/00_create_database.sql`.
+   (Alternatively, create the tables and import the CSV files from `data/`.)
+3. Run the queries in `sql/01_volume_and_profit_summary.sql`, one at a time.
 
 In Python:
 
