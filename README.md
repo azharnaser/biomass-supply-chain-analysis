@@ -163,7 +163,8 @@ biomass-supply-chain-analysis/
 ├── data/                                 # the 5 CSV files
 └── sql/
     ├── 00_create_database.sql            # creates all tables and loads the data
-    └── 01_volume_and_profit_summary.sql  # analysis queries (checked against expected results)
+    ├── 01_volume_and_profit_summary.sql  # analysis queries (checked against expected results)
+    └── 02_business_questions.sql # business questions: concentration, trends, purchases under sql/.
 ```
 
 ## How to reproduce
@@ -184,9 +185,15 @@ deliveries = pd.read_csv("data/03_deliveries.csv", parse_dates=["date", "month"]
 
 Excel (data preparation), SQL (SQLite or PostgreSQL), Python (pandas), Tableau Public / Looker Studio.
 
-## Key findings
 
-*To be added after the SQL, Python and Tableau Public / Looker Studio analysis.*
+## Key findings (SQL)
+
+- **Volume is not profit.** STP supplies 34.9% of the volume but only 25.4% of the gross profit (about Rp 69 per kg). STD supplies 12.5% of the volume but 21.6% of the profit (about Rp 164 per kg).
+- **Concentration:** the top 3 suppliers provide 61.4% of the kg and 59.2% of the profit.
+- **Lowest margin:** BGM earns about Rp 38 per kg. The BGM-BUMI route earns Rp 30 per kg on 157,670 kg.
+- **October vs September:** volume fell 22.9% and profit fell 24.8%. STP grew 37%, while BIS fell 87.9%.
+- **Open purchases:** 113,800 kg bought but not yet delivered (about 5% of the 2,250,000 kg purchased). BGM accounts for the largest part, 43,910 kg.
+- **Customer margins:** BUMI earns about Rp 101 per kg, while VINA and YAKIN earn about Rp 74.
 
 ## Author
 
