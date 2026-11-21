@@ -14,7 +14,7 @@ The data is anonymized and shared for educational and portfolio purposes only. N
 - [x] Data cleaned, modelled into 5 related tables and validated (71 automated checks, 0 failures)
 - [x] Tables exported to clean CSV files (UTF-8, comma-separated, ISO dates)
 - [x] SQL analysis (joins, aggregations, window functions)
-- [ ] Python analysis (pandas, exploratory analysis)
+- [x] Python analysis (pandas, exploratory analysis)
 - [ ] Tableau Public or Looker Studio dashboard
 - [ ] Findings and recommendations
 
@@ -198,7 +198,7 @@ Excel (data preparation), SQL (SQLite or PostgreSQL), Python (pandas), Tableau P
 ## Author
 
 **AZHAR NASER**
-This project uses data from my biomass trading and supply chain operations to build and demonstrate skills in data cleaning, SQL, Python and business intelligence.
+This project uses data from biomass trading and supply chain operations to build and demonstrate skills in data cleaning, SQL, Python and business intelligence.
 
 - LinkedIn: https://www.linkedin.com/in/azhar-naser-281b33217
 - Email: azharnaser01@gmail.com
