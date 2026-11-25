@@ -1,6 +1,10 @@
 # Biomass Supply Chain Analysis
 
-An end-to-end data analytics project built on **real operating data from my biomass trading business in Indonesia** (September to October 2026). The project covers 223 truck deliveries from 9 suppliers to 7 customers through 3 loading ports, together with pricing, route costs, gross profit and supplier purchase records.
+## Project Overview
+An end-to-end supply chain profitability and dispatch analysis of **223 Palm Kernel Shell (PKS) biomass deliveries** (2,136,200 kg total volume; Rp 203.6M gross profit) across **9 suppliers** and **3 Kalimantan loading ports** (`BTL`, `BJM`, `SPT`) during September–October 2026.
+
+**Tech Stack:** `SQLite` · `Python (Pandas, NumPy)` · `Tableau Public` · `GitHub`  
+**Live Interactive Dashboard:** [View on Tableau Public](YOUR_TABLEAU_PUBLIC_URL)
 
 All company, supplier and customer names are **anonymized**.
 
@@ -23,7 +27,7 @@ The data is anonymized and shared for educational and portfolio purposes only. N
 - [x] SQL analysis (joins, aggregations, window functions)
 - [x] Python analysis (pandas, exploratory analysis)
 - [x] Tableau Public 
-- [ ] Findings and recommendations
+- [x] Findings and recommendations
 
 ## Business questions
 
@@ -201,14 +205,37 @@ deliveries = pd.read_csv("data/03_deliveries.csv", parse_dates=["date", "month"]
 - **Version control:** Git and GitHub (GitHub Desktop)
 
 
-## Key findings (SQL)
+## Key Findings & Recommendations
 
-- **Volume is not profit.** STP supplies 34.9% of the volume but only 25.4% of the gross profit (about Rp 69 per kg). STD supplies 12.5% of the volume but 21.6% of the profit (about Rp 164 per kg).
-- **Concentration:** the top 3 suppliers provide 61.4% of the kg and 59.2% of the profit.
-- **Lowest margin:** BGM earns about Rp 38 per kg. The BGM-BUMI route earns Rp 30 per kg on 157,670 kg.
-- **October vs September:** volume fell 22.9% and profit fell 24.8%. STP grew 37%, while BIS fell 87.9%.
-- **Open purchases:** 113,800 kg bought but not yet delivered (about 5% of the 2,250,000 kg purchased). BGM accounts for the largest part, 43,910 kg.
-- **Customer margins:** BUMI earns about Rp 101 per kg, while VINA and YAKIN earn about Rp 74.
+### Key Findings
+
+1. **Volume–Margin Mismatch Across Suppliers**
+   * **STP** accounts for **34.9%** of total shipped volume—more than double the second-largest supplier (**BSP** at **14.0%**) and nearly triple **STD** (**12.5%**) and **SAF** (**12.2%**).
+   * However, **STP** generates only **Rp 69.3 per kg** in gross profit (well below the portfolio average of **Rp 95.3 per kg**), whereas top-margin suppliers **STD** (**Rp 164.2/kg**), **BIS** (**Rp 154.3/kg**), **KMB** (**Rp 150.6/kg**), **PMK** (**Rp 149.0/kg**), and **SSP** (**Rp 144.0/kg**) earn more than twice STP's unit margin while collectively representing **31.0%** of total volume.
+   * **BGM** is the lowest-performing supplier on unit margin at **Rp 37.6 per kg** across **7.8%** of volume.
+
+2. **Month-over-Month Contraction (September vs. October 2026)**
+   * Total shipped volume dropped **22.9%**, falling from **1,206,130 kg** in September to **930,070 kg** in October.
+   * Gross profit contracted slightly faster at **24.8%** (from **Rp 116,180,570** to **Rp 87,425,770**), indicating that October's volume decline was accompanied by a slightly less favorable supplier or port margin mix.
+
+3. **Port Concentration**
+   * **Batulicin (BTL)** handles **1,186,340 kg** (**55.5%** of total volume), followed by **Banjarmasin (BJM)** at **552,880 kg** (**25.9%**) and **Sampit (SPT)** at **396,980 kg** (**18.6%**).
+
+---
+
+### Actionable Recommendations
+
+1. **Rebalance Volume Allocation Toward High-Margin Suppliers**
+   * Gradually shift incremental purchase orders from low-margin bulk suppliers (**STP** at Rp 69.3/kg and **BGM** at Rp 37.6/kg) toward above-average margin suppliers (**STD**, **BIS**, **KMB**, **PMK**, and **SSP**) where supply capacity permits.
+   * Reallocating even **5–10% of total volume** from STP/BGM into the Rp 144–164/kg tier directly lifts blended portfolio gross profit per kg without requiring higher total tonnage.
+
+2. **Renegotiate Pricing or Logistics Terms with STP and BGM**
+   * Conduct a cost-structure review on **STP** (high volume leverage at 34.9% share) and **BGM** (lowest unit margin at Rp 37.6/kg) to identify whether margin compression stems from ex-mill purchase price, trucking distance, or moisture/quality deductions, and set a minimum target threshold near the **Rp 95.3/kg** portfolio average.
+
+3. **Stabilize Monthly Dispatch Cadence and Protect BTL Throughput**
+   * Investigate the root cause of the **22.9% October volume drop** (e.g., weather delays, barge scheduling, or factory deposit timing) to smooth monthly fulfillment.
+   * Because **BTL** processes over half of all shipments (**1,186,340 kg**), prioritize berth scheduling, stockpile buffers, and barge readiness at Batulicin to prevent bottlenecks from amplifying month-over-month revenue swings.
+
 
 ## Author
 
