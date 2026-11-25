@@ -4,6 +4,13 @@ An end-to-end data analytics project built on **real operating data from my biom
 
 All company, supplier and customer names are **anonymized**.
 
+
+## Dashboard
+
+[![Dashboard overview](dashboard/dashboard_overview.png)](https://public.tableau.com/views/BiomassSupplyChainVolumevsProfit/dashboard_overview?:language=en-GB&:display_count=n&:origin=viz_share_link)
+
+[View the interactive dashboard](https://public.tableau.com/views/BiomassSupplyChainVolumevsProfit/dashboard_overview?:language=en-GB&:display_count=n&:origin=viz_share_link)
+
 ## Disclaimer
 
 The data is anonymized and shared for educational and portfolio purposes only. Names have been changed; prices and costs are real values. Figures should not be used for commercial decisions.
@@ -15,7 +22,7 @@ The data is anonymized and shared for educational and portfolio purposes only. N
 - [x] Tables exported to clean CSV files (UTF-8, comma-separated, ISO dates)
 - [x] SQL analysis (joins, aggregations, window functions)
 - [x] Python analysis (pandas, exploratory analysis)
-- [ ] Tableau Public or Looker Studio dashboard
+- [x] Tableau Public 
 - [ ] Findings and recommendations
 
 ## Business questions
@@ -161,11 +168,15 @@ biomass-supply-chain-analysis/
 ├── README.md
 ├── audit_dataset.py                      # data quality audit (runs on the source Excel workbook, not published here)
 ├── data/                                 # the 5 CSV files
+├── notebooks/                            # Python analysis (pandas, charts)
+├── dashboard/                            # dashboard table and screenshot
 └── sql/
     ├── 00_create_database.sql            # creates all tables and loads the data
     ├── 01_volume_and_profit_summary.sql  # analysis queries (checked against expected results)
-    └── 02_business_questions.sql # business questions: concentration, trends, purchases under sql/.
+    └── 02_business_questions.sql         # business questions: concentration, trends, purchases
 ```
+
+
 
 ## How to reproduce
 
@@ -183,7 +194,11 @@ deliveries = pd.read_csv("data/03_deliveries.csv", parse_dates=["date", "month"]
 
 ## Tools
 
-Excel (data preparation), SQL (SQLite or PostgreSQL), Python (pandas), Tableau Public / Looker Studio.
+- **Data preparation:** Excel
+- **SQL:** SQLite (DB Browser for SQLite)
+- **Python:** pandas and matplotlib, in Jupyter notebooks (VS Code)
+- **Dashboard:** Tableau Public
+- **Version control:** Git and GitHub (GitHub Desktop)
 
 
 ## Key findings (SQL)
