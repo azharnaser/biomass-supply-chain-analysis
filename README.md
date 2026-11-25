@@ -4,7 +4,6 @@
 An end-to-end supply chain profitability and dispatch analysis of **223 Palm Kernel Shell (PKS) biomass deliveries** (2,136,200 kg total volume; Rp 203.6M gross profit) across **9 suppliers** and **3 Kalimantan loading ports** (`BTL`, `BJM`, `SPT`) during September–October 2026.
 
 **Tech Stack:** `SQLite` · `Python (Pandas, NumPy)` · `Tableau Public` · `GitHub`  
-**Live Interactive Dashboard:** [View on Tableau Public](YOUR_TABLEAU_PUBLIC_URL)
 
 All company, supplier and customer names are **anonymized**.
 
